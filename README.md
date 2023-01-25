@@ -5,4 +5,4 @@
 
 ![](Plots/Diagram1.png) ![](Plots/Diagram4.png)
 ![](Plots/Diagram2.png) ![](Plots/Diagram5.png)
-![](Plots/Diagram3.png) ![](Plots/Diagram6.png
+![](Plots/Diagram3.png) ![](Plots/Diagram6.png)
