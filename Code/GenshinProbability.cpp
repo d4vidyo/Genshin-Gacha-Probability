@@ -10,7 +10,7 @@
 #define weaponMaxTrys 80
 #define weaponSoftPity 63
 #define weaponBaseProbability 0.7f
-#define weaponSoftPityProbability 7
+#define weaponSoftPityProbability 5.52f
 #define weaponPityMaxTrys 3
 
 double probabilityOf[maxTrys + 1];
@@ -26,8 +26,9 @@ void preCalculationsWeapon() {
 	for (int i = 1; i < weaponSoftPity; i++) {
 		weaponProbabilityOf[i] = weaponBaseProbability;
 	}
-	for (int i = weaponSoftPity; i <= maxTrys; i++) {
+	for (int i = weaponSoftPity; i <= weaponMaxTrys; i++) {
 		weaponProbabilityOf[i] = weaponBaseProbability + weaponSoftPityProbability * (i - weaponSoftPity + 1);
+		std::cout << i << ": " << weaponProbabilityOf[i] << std::endl;
 		if (weaponProbabilityOf[i] > 100) { weaponProbabilityOf[i] = 100; }
 	}
 	for (int i = 0; i <= weaponMaxTrys; i++) {
@@ -195,6 +196,7 @@ void weaponCount() {
 		}
 		delete[] sumOfProbability;
 	}
+
 	/*
 	for (int i = 0; i <= 5 * weaponMaxTrys * weaponPityMaxTrys; i++) {
 		std::cout << i << ";";
@@ -352,7 +354,7 @@ int main()
 	preCalculationsWeapon();
 	//weaponCount();
 
-	charAndWeapon();
+	//charAndWeapon();
 
 	return 0;
 }
