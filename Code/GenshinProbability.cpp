@@ -50,7 +50,7 @@ void main() {
 	for (int i = 0; i <= w; i++) {
 		//std::cout << std::setprecision(20) << i << ";" << Character::TotalChanceChar(i, C, wsp_char) << std::endl;
 		//std::cout << std::setprecision(20) << i << ";" << Weapon::TotalChanceWeapon(i, R, wsp_wpn, F, wpnPity ) << std::endl;
-		td::cout << std::setprecision(20) << i << ";" << Q_cum(i, C, wsp_char, R, wsp_wpn, F, wpnPity) << std::endl;
+		std::cout << std::setprecision(20) << i << ";" << Q_cum(i, C, wsp_char, R, wsp_wpn, F, wpnPity) << std::endl;
 	}
 
 }
